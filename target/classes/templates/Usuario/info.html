@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Información del Autor</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+    <h1>Información del Usuario</h1>
+    <div>
+        <h2>Nombre del Usuario: <span th:text="${usuario.nombre}"></span></h2>
+        <!-- <p>Bibliografía: <span th:text="${autor.biografia}"></span></p> -->
+      
+    </div>
+
+    <h2>Campos de futbol inscrito el Usuario</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>precio</th>
+             
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="campo : ${usuario.campos}">
+                <td th:text="${campo.nombre}"></td>
+                <td th:text="${campo.precio}"></td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="/campos" class="button">Volver a Campos</a>
+</body>
+</html>
