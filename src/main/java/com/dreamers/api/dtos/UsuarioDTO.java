@@ -9,14 +9,16 @@ public class UsuarioDTO {
 
 	private String nombre;
 	private String email;
+    private String rol;
 	private String password;
 
 	public UsuarioDTO() {
 	}
 
-	public UsuarioDTO(String nombre, String email, String password) {
+	public UsuarioDTO(String nombre, String email, String rol,String password) {
 		this.nombre = nombre;
 		this.email = email;
+        this.rol = rol;
 		this.password = password;
 	}
 
@@ -39,6 +41,14 @@ public class UsuarioDTO {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	public String getRol() {
+		return rol;
+	}
+	
+	public void setRol(String rol) {
+        this.rol = rol;
+    }
 
 	public void setPassword(String password) {
 		this.password = password;
@@ -46,7 +56,7 @@ public class UsuarioDTO {
 	
 	@Override
 	public String toString() {
-		return "UsuarioDTO [nombre=" + nombre + ", email=" + email + ", password=" + password + "]";
+		return "UsuarioDTO [nombre=" + nombre + ", email=" + email + ", rol=" + rol + ", password=" + password + "]";
 	}
 	
 	

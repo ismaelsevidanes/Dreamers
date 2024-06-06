@@ -2,6 +2,8 @@ package com.dreamers.api.servicios;
 
 import org.springframework.stereotype.Service;
 
+
+
 import com.dreamers.api.dtos.UsuarioDTO;
 import com.dreamers.api.entidades.Usuario;
 
@@ -33,6 +35,7 @@ public interface UsuarioService {
      * @return Lista de objetos UsuarioDTO.
      */
     List<UsuarioDTO> obtenerTodos();
+
     
     Page<Usuario> getAllUsuario(Pageable pageable);
     Optional<Usuario> getUsuarioById(Long id);

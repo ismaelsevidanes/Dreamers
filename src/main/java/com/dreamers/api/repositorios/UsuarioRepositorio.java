@@ -23,7 +23,6 @@ import com.dreamers.api.entidades.Usuario;
 		 * @return El usuario con el nombre de usuario especificado, o null si no se
 		 *         encuentra.
 		 */
-		 Optional<Usuario> findByDni(String dni);
 		 Optional<Usuario> findById(Long id);
 		 Optional<Usuario> findByEmail(String email);
 
@@ -32,7 +31,6 @@ import com.dreamers.api.entidades.Usuario;
 		 * Comprueba si un usuario con el nombre de usuario especificado existe en la
 		 * base de datos.
 		 */
-		Boolean existsByDni(String dni);
 		Boolean existsById(Long id);
 		Boolean existsByEmail(String email);
 
@@ -41,7 +39,6 @@ import com.dreamers.api.entidades.Usuario;
     /**
      * Busca un usuario por su nombre de usuario o dirección de correo electrónico.
      */
-	Optional<Usuario> findByDniOrEmail(String dni, String email);
     
 	 Optional<Usuario> deleteById(Long id);
 

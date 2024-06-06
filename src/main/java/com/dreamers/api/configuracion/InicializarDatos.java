@@ -1,6 +1,7 @@
 package com.dreamers.api.configuracion;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
@@ -49,7 +50,6 @@ public class InicializarDatos implements CommandLineRunner {
         usuarioAdmin = new Usuario();
         usuarioAdmin.setNombre("Ismael");
         usuarioAdmin.setApellidos("Sevidanes");
-        usuarioAdmin.setDni("12345678A");
         usuarioAdmin.setDireccion("Calle Ismael");
         usuarioAdmin.setTelefono(666666666);
         usuarioAdmin.setEmail("ismael.sevidanes@example.com");
@@ -66,7 +66,6 @@ public class InicializarDatos implements CommandLineRunner {
         usuarioUser = new Usuario();
         usuarioUser.setNombre("Mamuel");
         usuarioUser.setApellidos("Rodriguez");
-        usuarioAdmin.setDni("12345678B");
         usuarioAdmin.setDireccion("Calle Manuel");
         usuarioAdmin.setTelefono(111111111);
         usuarioUser.setEmail("manuel.rodriguez@example.com");
@@ -81,7 +80,6 @@ public class InicializarDatos implements CommandLineRunner {
         usuario = new Usuario();
         usuario.setNombre("usuario");
         usuario.setApellidos("usuario");
-        usuarioAdmin.setDni("12345678C");
         usuarioAdmin.setDireccion("Calle User");
         usuarioAdmin.setTelefono(222222222);
         usuario.setEmail("usuario");

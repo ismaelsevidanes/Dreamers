@@ -43,10 +43,7 @@ public class Usuario implements UserDetails {
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	    private Long id;
 	  
-//	  @Setter
-//	  @Getter
-	  @Column(unique = true)
-	    private String dni;
+
 	  
 	  @NotBlank(message = "El nombre no puede estar vacío") // Asegura que el nombre no sea null o esté vacío
 	   @Size(min=1, max = 25, message = "Un mínimo de 1 y máximo de 25 caracteres") // Limita la longitud del nombre
@@ -97,13 +94,7 @@ public class Usuario implements UserDetails {
 			this.id = id;
 		}
 	    
-		public String getDni() {
-			return dni;
-		}
-	    
-	    public void setDni(String dni) {
-	        this.dni= dni;
-	    }
+
 	  
 		public String getNombre() {
 			return nombre;
@@ -199,9 +190,9 @@ public class Usuario implements UserDetails {
 		
 		@Override
 		public String toString() {
-			return "Usuario [id=" + id + ", dni=" + dni + ", nombre=" + nombre + ", apellidos=" + apellidos
-					+ ", telefono=" + telefono + ", direccion=" + direccion + ", email=" + email + ", password="
-					+ password + ", roles=" + roles + "]";
+			return "Usuario [id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", telefono=" + telefono
+					+ ", direccion=" + direccion + ", email=" + email + ", password=" + password + ", roles=" + roles
+					+ "]";
 		}
 }
 		
