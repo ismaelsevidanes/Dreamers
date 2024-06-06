@@ -1,7 +1,12 @@
 package com.dreamers.api.repositorios;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+
 import org.springframework.data.domain.Page;
+
 import org.springframework.data.domain.Pageable;
 
 import com.dreamers.api.entidades.Reserva;
@@ -14,11 +19,11 @@ import com.dreamers.api.entidades.Reserva;
 	 */
 public interface ReservaRepositorio extends JpaRepository<Reserva, Integer> {
 
-	Reserva findById(Long id);
+	Optional <Reserva> findById(Long id);
 	Boolean existsById(Long id);
-	Reserva deleteById(Long id);
-	Reserva findByFecha(String fecha);
-	//Reserva findbyPrecio(Integer precio);
+	Optional <Reserva> deleteById(Long id);
+	Optional <Reserva> findByFecha(String fecha);
+//	Optional <Reserva>findbyPrecio(Long precio);
 	
 	Page<Reserva> findByFechaContainingIgnoreCase(String fecha, Pageable pageable);
 	Page<Reserva> findByUsuarioId(Integer usuarioId, Pageable pageable);

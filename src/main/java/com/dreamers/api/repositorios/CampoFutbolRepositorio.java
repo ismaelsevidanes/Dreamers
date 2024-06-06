@@ -1,6 +1,9 @@
 package com.dreamers.api.repositorios;
 
 import org.springframework.data.domain.Pageable;
+
+import java.util.Optional;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -8,14 +11,15 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.dreamers.api.entidades.CampoFutbol;
 
 public interface CampoFutbolRepositorio extends JpaRepository<CampoFutbol, Integer> {
-	CampoFutbol findByNombre(String nombre);
+	Optional<CampoFutbol> findByNombre(String nombre);
 	Boolean existsByNombre(String nombre);
-	CampoFutbol findById(Long id);
+	Optional<CampoFutbol> findById(Long id);
 	Boolean existsById(Long id);
 	
 	Page<CampoFutbol> findByNombreContainingIgnoreCase(String nombre, Pageable pageable);
-	Page<CampoFutbol> findByPrecio(Integer precio, Pageable pageable);
-	CampoFutbol deleteById(Long id);
+	Optional<CampoFutbol> findByPrecio(Integer precio);
+
+	Optional<CampoFutbol> deleteById(Long id);
 	
 	
 	

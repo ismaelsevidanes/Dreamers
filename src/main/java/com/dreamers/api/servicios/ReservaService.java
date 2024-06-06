@@ -4,6 +4,8 @@ import org.springframework.stereotype.Service;
 
 import com.dreamers.api.entidades.Reserva;
 
+import java.util.Optional;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -13,7 +15,7 @@ public interface ReservaService {
 
 	Page<Reserva> getAllReservas(Pageable pageable);
 
-	Reserva getReservaById(Long id);
+	Optional<Reserva> getReservaById(Long id);
 
 	Reserva saveReserva(Reserva reserva);
 
@@ -21,9 +23,9 @@ public interface ReservaService {
 
 	Boolean deleteReserva(Long id);
 
-	Page<Reserva> filtrarReservasPorFecha(String fecha, Pageable pageable);
+	Optional<Reserva> filtrarreservasporfecha(String fecha);
 	
-	Page<Reserva> filtrarReservasPorPrecio(Integer precio, Pageable pageable);
+//	Optional<Reserva> filtrarreservasporprecio(Long precio);
 	
 	
 

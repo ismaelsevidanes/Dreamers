@@ -4,6 +4,7 @@ import java.util.Collection;
 
 
 
+
 import java.util.HashSet;
 
 import java.util.Set;
@@ -13,7 +14,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.dreamers.api.entidades.Role;
 
 import jakarta.persistence.CollectionTable;
 //imports
@@ -194,5 +194,76 @@ public class Usuario implements UserDetails {
 					+ ", direccion=" + direccion + ", email=" + email + ", password=" + password + ", roles=" + roles
 					+ "]";
 		}
+		
+		 public static UsuarioBuilder builder() {
+		        return new UsuarioBuilder();
+		    }
+		    
+		    public static class UsuarioBuilder {
+		        private Long id;
+		        private String nombre;
+		        private String apellidos;
+		        private Integer telefono;
+		        private String direccion;
+		        private String email;
+		        private String password;
+		        private Set<Role> roles = new HashSet<>();
+
+		        private UsuarioBuilder() {
+		        }
+
+		        public UsuarioBuilder id(Long id) {
+		            this.id = id;
+		            return this;
+		        }
+
+		        public UsuarioBuilder nombre(String nombre) {
+		            this.nombre = nombre;
+		            return this;
+		        }
+
+		        public UsuarioBuilder apellidos(String apellidos) {
+		            this.apellidos = apellidos;
+		            return this;
+		        }
+		        
+				public UsuarioBuilder telefono(Integer telefono) {
+					this.telefono = telefono;
+					return this;
+				}
+				
+				public UsuarioBuilder direccion(String direccion) {
+					this.direccion = direccion;
+					return this;
+				}
+
+		        public UsuarioBuilder email(String email) {
+		            this.email = email;
+		            return this;
+		        }
+
+		        public UsuarioBuilder password(String password) {
+		            this.password = password;
+		            return this;
+		        }
+
+		        public UsuarioBuilder roles(Set<Role> roles) {
+		            this.roles = roles;
+		            return this;
+		        }
+
+		        public Usuario build() {
+		        	Usuario usuario = new Usuario();
+		        	usuario.setId(id);
+		        	usuario.setNombre(nombre);
+		        	usuario.setApellidos(apellidos);
+		        	usuario.setTelefono(telefono);
+		        	usuario.setDireccion(direccion);
+		        	usuario.setEmail(email);
+		        	usuario.setPassword(password);
+		        	usuario.setRoles(roles);
+		            return usuario;
+		        }
+		    }
 }
 		
