@@ -56,8 +56,8 @@ public class CampoFutbol {
 	@JoinColumn(name = "id_usuario")
 	private Usuario usuario;
 
-	@ManyToMany(fetch = FetchType.LAZY)
-	private Set<Reserva> reservas = new HashSet<>();
+//	@ManyToMany(fetch = FetchType.LAZY)
+//	private Set<Reserva> reservas = new HashSet<>();
 
 	public Long getId() {
 		return id;
@@ -124,27 +124,27 @@ public class CampoFutbol {
 		this.usuario = usuario;
 	}
 	
-	public Set<Reserva> getReservas() {
-		return reservas;
-	}
-	
-	public void setReservas(Set<Reserva> reservas) {
-		this.reservas = reservas;
-	}
-	
-	public boolean agregarReserva(Reserva reserva) {
-		return reservas.add(reserva);
-	}
-	
-	public boolean eliminarReserva(Reserva reserva) {
-		return reservas.remove(reserva);
-	}
+//	public Set<Reserva> getReservas() {
+//		return reservas;
+//	}
+//	
+//	public void setReservas(Set<Reserva> reservas) {
+//		this.reservas = reservas;
+//	}
+//	
+//	public boolean agregarReserva(Reserva reserva) {
+//		return reservas.add(reserva);
+//	}
+//	
+//	public boolean eliminarReserva(Reserva reserva) {
+//		return reservas.remove(reserva);
+//	}
 	
 	@Override
 	public String toString() {
 		return "CampoFutbol [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", direccion="
 				+ direccion + ", precio=" + precio + ", capacidad=" + capacidad + ", TipoCampo=" + TipoCampo
-				+ ", usuario=" + usuario + ", reservas=" + reservas + "]";
+				+ ", usuario=" + usuario  + "]";
 	}
 	
 	

@@ -42,8 +42,6 @@ public class UsuarioTest {
         Usuario usuario = new Usuario();
         usuario.setNombre("Ismael");
         usuario.setApellidos("Sevidanes");
-        usuario.setTelefono(123456789);
-        usuario.setDireccion("Calle asa  nº 1");
         usuario.setEmail("ismael.sevidanes@example.com");
         usuario.setPassword("root");
         
@@ -60,8 +58,6 @@ public class UsuarioTest {
         	 Usuario usuario = new Usuario();
              usuario.setNombre("");
              usuario.setApellidos("Sevidanes");
-             usuario.setTelefono(123456789);
-             usuario.setDireccion("Calle asa  nº 1");
              usuario.setEmail("ismael.sevidanes@example.com");
              usuario.setPassword("root");
              
@@ -80,8 +76,6 @@ public class UsuarioTest {
              	 Usuario usuario = new Usuario();
                   usuario.setNombre("Ismael");
                   usuario.setApellidos("");
-                  usuario.setTelefono(123456789);
-                  usuario.setDireccion("Calle asa  nº 1");
                   usuario.setEmail("ismael.sevidanes@example.com");
                   usuario.setPassword("root");
                   
@@ -100,8 +94,6 @@ public class UsuarioTest {
               	 Usuario usuario = new Usuario();
                    usuario.setNombre("Ismael");
                    usuario.setApellidos("Sevidanes");
-                   usuario.setTelefono(null);
-                   usuario.setDireccion("Calle asa  nº 1");
                    usuario.setEmail("ismael.sevidanes@example.com");
                    usuario.setPassword("root");
                    
@@ -120,8 +112,6 @@ public class UsuarioTest {
                 	 Usuario usuario = new Usuario();
                      usuario.setNombre("Ismael");
                      usuario.setApellidos("Sevidanes");
-                     usuario.setTelefono(123456789);
-                     usuario.setDireccion("");
                      usuario.setEmail("ismael.sevidanes@example.com");
                      usuario.setPassword("root");
                      
@@ -140,8 +130,6 @@ public class UsuarioTest {
                     	 Usuario usuario = new Usuario();
                          usuario.setNombre("Ismael");
                          usuario.setApellidos("Sevidanes");
-                         usuario.setTelefono(123456789);
-                         usuario.setDireccion("calla asa nº 1");
                          usuario.setEmail("");
                          usuario.setPassword("root");
                          
@@ -159,8 +147,6 @@ public class UsuarioTest {
                         	 Usuario usuario = new Usuario();
                              usuario.setNombre("Ismael");
                              usuario.setApellidos("Sevidanes");
-                             usuario.setTelefono(123456789);
-                             usuario.setDireccion("calla asa nº 1");
                              usuario.setEmail("ismael.sevidanes@example.com");
                              usuario.setPassword("");
                              
@@ -180,8 +166,6 @@ public class UsuarioTest {
                         usuario.setId(1L);
                         usuario.setNombre("Ismael");
                         usuario.setApellidos("Sevidanes");
-                        usuario.setTelefono(123456789);
-                        usuario.setDireccion("Calle asa  nº 1");
                         usuario.setEmail("ismael.sevidanes@example.com");
                         usuario.setPassword("root");
                         usuario.setRoles(Set.of(Role.ROLE_USER, Role.ROLE_ADMIN));
@@ -204,8 +188,6 @@ public class UsuarioTest {
                         usuario.setId(1L);
                         usuario.setNombre("Ismael");
                         usuario.setApellidos("Sevidanes");
-                        usuario.setTelefono(123456789);
-                        usuario.setDireccion("Calle asa  nº 1");
                         usuario.setEmail("ismael.sevidanes@example.com");
                         usuario.setPassword("root");
 
@@ -233,8 +215,6 @@ public class UsuarioTest {
                         assertThat(usuario.getId()).isEqualTo(1L);
                         assertThat(usuario.getNombre()).isEqualTo("Ismael");
                         assertThat(usuario.getApellidos()).isEqualTo("Sevidanes");
-                        assertThat(usuario.getTelefono()).isEqualTo(123456789);
-                        assertThat(usuario.getDireccion()).isEqualTo("Calle asa  nº 1");
                         assertThat(usuario.getEmail()).isEqualTo("ismael.sevidanes@example.com");
                         assertThat(usuario.getPassword()).isEqualTo("root");
                         assertThat(usuario.getRoles()).containsExactlyInAnyOrder(Role.ROLE_USER, Role.ROLE_ADMIN);

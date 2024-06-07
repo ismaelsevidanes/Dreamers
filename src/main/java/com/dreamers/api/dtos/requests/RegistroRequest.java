@@ -23,12 +23,6 @@ package com.dreamers.api.dtos.requests;
 //	@Size(min = 1, max = 35, message = "Un mínimo de 1 y máximo de 25 caracteres") // Limita la longitud
 //	private String apellidos;
 //
-//	@NotNull(message = "El telefono no puede estar vacío") // Asegura que no sea null o esté vacío
-//	private Integer telefono;
-//
-//	@NotBlank(message = "La direccion no puede estar vacío") // Asegura que no sea null o esté vacío
-//	private String direccion;
-//
 //	@NotBlank(message = "El email no puede estar vacío") // Asegura que no sea null o esté vacío
 //	private String email;
 //
@@ -50,14 +44,11 @@ package com.dreamers.api.dtos.requests;
 //			//@NotBlank(message = "El dni no puede estar vacío") @Size(min = 1, max = 9, message = "Un mínimo de 1 y máximo de 9 caracteres") String dni,
 //			@NotBlank(message = "El nombre no puede estar vacío") @Size(min = 1, max = 25, message = "Un mínimo de 1 y máximo de 25 caracteres") String nombre,
 //			@NotBlank(message = "Los apellidos no puede estar vacío") @Size(min = 1, max = 35, message = "Un mínimo de 1 y máximo de 25 caracteres") String apellidos,
-//			@NotNull(message = "El telefono no puede estar vacío") Integer telefono,
-//			@NotBlank(message = "La direccion no puede estar vacío") String direccion,
 //			@NotBlank(message = "El email no puede estar vacío") String email,
 //			@NotBlank(message = "La contraseña no puede estar vacío") String password) {
 //		this.nombre = nombre;
 //		this.apellidos = apellidos;
-//		this.telefono = telefono;
-//		this.direccion = direccion;
+
 //		this.email = email;
 //		this.password = password;
 //	}
@@ -79,21 +70,6 @@ package com.dreamers.api.dtos.requests;
 //		this.apellidos = apellidos;
 //	}
 //	
-//	public Integer getTelefono() {
-//		return telefono;
-//	}
-//	
-//	public void setTelefono(Integer telefono) {
-//		this.telefono = telefono;
-//	}
-//	
-//	public String getDireccion() {
-//		return direccion;
-//	}
-//	
-//	public void setDireccion(String direccion) {
-//		this.direccion = direccion;
-//	}
 //	
 //	public String getEmail() {
 //		return email;
@@ -124,8 +100,6 @@ public class RegistroRequest {
     private String nombre;
     private String apellidos;
     private String email;
-    private Integer telefono;
-    private String direccion;
     private String password;
     
 	public String getNombre() {
@@ -147,22 +121,6 @@ public class RegistroRequest {
 	
 	public void setEmail(String email) {
 		this.email = email;
-	}
-
-	public Integer getTelefono() {
-		return telefono;
-	}
-	
-	public void setTelefono(Integer telefono) {
-		this.telefono = telefono;
-	}
-	
-	public String getDireccion() {
-		return direccion;
-	}
-	
-	public void setDireccion(String direccion) {
-		this.direccion = direccion;
 	}
 	
 	

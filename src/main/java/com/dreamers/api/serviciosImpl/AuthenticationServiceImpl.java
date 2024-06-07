@@ -68,8 +68,6 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         usuario.setNombre(request.getNombre());
         usuario.setApellidos(request.getApellidos());
         usuario.setEmail(request.getEmail());
-        usuario.setDireccion(request.getDireccion());
-        usuario.setTelefono(request.getTelefono());
         usuario.setPassword(request.getPassword());
         usuario.getRoles().add(Role.ROLE_USER);
         usuarioRepositorio.save(usuario);

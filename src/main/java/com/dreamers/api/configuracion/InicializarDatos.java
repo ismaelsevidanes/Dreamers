@@ -49,9 +49,7 @@ public class InicializarDatos implements CommandLineRunner {
         if (usuarioRepositorio.findByEmail("ismael.sevidanes@example.com").isEmpty()) {
         usuarioAdmin = new Usuario();
         usuarioAdmin.setNombre("Ismael");
-        usuarioAdmin.setApellidos("Sevidanes");
-        usuarioAdmin.setDireccion("Calle Ismael");
-        usuarioAdmin.setTelefono(666666666);
+        usuarioAdmin.setApellidos("Sevidanes");;
         usuarioAdmin.setEmail("ismael.sevidanes@example.com");
         usuarioAdmin.setPassword("admin");
         usuarioAdmin.getRoles().add(Role.ROLE_ADMIN);
@@ -66,8 +64,6 @@ public class InicializarDatos implements CommandLineRunner {
         usuarioUser = new Usuario();
         usuarioUser.setNombre("Mamuel");
         usuarioUser.setApellidos("Rodriguez");
-        usuarioAdmin.setDireccion("Calle Manuel");
-        usuarioAdmin.setTelefono(111111111);
         usuarioUser.setEmail("manuel.rodriguez@example.com");
         usuarioUser.setPassword("user");
         usuarioUser.getRoles().add(Role.ROLE_USER);
@@ -80,8 +76,6 @@ public class InicializarDatos implements CommandLineRunner {
         usuario = new Usuario();
         usuario.setNombre("usuario");
         usuario.setApellidos("usuario");
-        usuarioAdmin.setDireccion("Calle User");
-        usuarioAdmin.setTelefono(222222222);
         usuario.setEmail("usuario");
         usuario.setPassword("usuario");
         usuario.getRoles().add(Role.ROLE_USER);
@@ -105,6 +99,7 @@ public class InicializarDatos implements CommandLineRunner {
        campoFutbol1.setPrecio(50);
        campoFutbol1.setCapacidad(10);
        campoFutbol1.setTipoCampo("Futbol 7");
+       campoFutbol1.setUsuario(usuarioAdmin);
        campoFutbolRepositorio.save(campoFutbol1);
        
        //CampoFutbol2
@@ -114,8 +109,9 @@ public class InicializarDatos implements CommandLineRunner {
        campoFutbol2.setDireccion("Calle CampoFutbol2");
        campoFutbol2.setPrecio(60);
        campoFutbol2.setCapacidad(12);
-       campoFutbol2.setTipoCampo("Futbol 7");
-       campoFutbolRepositorio.save(campoFutbol1);
+       campoFutbol2.setTipoCampo("Futbol 11");
+       campoFutbol2.setUsuario(usuarioUser);
+       campoFutbolRepositorio.save(campoFutbol2);
        
        //Reserva1
        Reserva reserva1 = new Reserva();
